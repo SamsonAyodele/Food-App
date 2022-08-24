@@ -5,7 +5,7 @@
 }
 
 body {
-  background: rgba(251, 221, 187, 0.51);
+  background: rgba(47, 37, 27, 0.51);
 }
 
 .landingPage {
@@ -113,4 +113,44 @@ span img {
   line-height: 33px;
   text-align: center;
   color: rgba(255, 255, 255, 0.83);
+}
+
+.menu--description {
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.menudata {
+  padding: 2rem;
+  align-items: center;
+}
+
+.menu--title1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.menudata h1 {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 27px;
+  line-height: 33px;
+  text-align: center;
+  color: #FBDDBB;
+}
+
+.menudata p {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 33px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.83);
+}
+
+.menudata img {
+  border-radius: 400px;
 }

@@ -6,10 +6,18 @@ import Soc1 from '../assets/Group.svg'
 import Soc2 from '../assets/Layer 2.svg'
 import Img1 from '../assets/head.svg'
 import Menu from '../Components/Menu'
-
-
+import Menu1 from '../assets/menu1.svg'
+import Menu2 from '../assets/menu2.svg'
+import Menu3 from '../assets/menu3.svg'
 
 const LandingPage = () => {
+
+    const data = [
+        {menu: Menu1, title:'Stir fry Pasta', description:'Stir fry pasta yada yada yada because of Sesan'},
+        {menu: Menu2, title:'Meat Balls', description:'Stir fry pasta yada yada yada because of Sesan'}, 
+        {menu: Menu3, title:'Burger Meal', description:'Stir fry pasta yada yada yada because of Sesan'}
+    ]
+
   return (
     <div className='landingPage'>
         <div className='navigation'>
@@ -41,7 +49,7 @@ const LandingPage = () => {
                 <img src={Img1} alt='img'></img>
             </div>
         </div>
-        <Menu />
+        <Menu data={data}/>
     </div>
   )
 }
