@@ -1,10 +1,11 @@
 import React from 'react'
 
-const Nav = () => {
+
+const Nav = ({text}) => {
   return (
     <div className='nav'>
         <ul>
-            <li><a></a></li>
+           <li>{text}</li> 
         </ul>
     </div>
   )

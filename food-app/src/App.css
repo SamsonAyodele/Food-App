@@ -9,5 +9,46 @@ body {
 }
 
 .landingPage {
- 
+  padding: 1rem;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+.navigation--left {
+  display: flex;
+}
+
+.header--text h1 {
+  margin-left: 0.5rem;
+  margin-top: 1rem;
+}
+
+.navigation--right {
+  display: flex;
+  margin: 0.3rem;
+}
+
+.nav {
+  margin: 0.3rem;
+}
+
+li {
+  list-style-type: none;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 33px;
+}
+
+button {
+  margin-top: 0.2rem;
+  padding: 0.5rem;
+  margin-left: 1rem;
 }
