@@ -52,3 +52,65 @@ button {
   padding: 0.5rem;
   margin-left: 1rem;
 }
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8rem;
+}
+
+.heading--text {
+  padding: 1rem ;
+}
+
+.heading--text h1 {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 64px;
+  line-height: 77px;
+  color: #FFFFFF;
+}
+
+.heading--text p {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 33px;
+  color: rgba(255, 255, 255, 0.74);
+}
+
+.heading--image {
+  margin-right: 5rem;
+  border-radius: 400px;
+}
+
+span img {
+  margin-top: 2rem;
+  background: #FFFFFF;
+}
+
+.menu--text {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.menu--text h1 {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 33px;
+  color: rgba(255, 255, 255, 0.87);
+}
+
+.menu--text p {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 33px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.83);
+}
