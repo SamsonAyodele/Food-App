@@ -128,7 +128,7 @@ span img {
 .menu--title1 {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .menudata h1 {
@@ -153,4 +153,55 @@ span img {
 
 .menudata img {
   border-radius: 400px;
+}
+
+.update {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 2rem;
+  padding-right: 3rem;
+  margin-top: 5rem;
+}
+
+input {
+  padding: 0.3rem;
+  margin: 0.2rem;
+}
+
+input .notify {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  color: #00302E;
+}
+
+input .mail {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  color: #B2B2B2;
+}
+
+.update--text h1 {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 33px;
+  color: #FBDDBB;
+}
+
+.update--text p {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 33px;
+  color: rgba(255, 255, 255, 0.95);
 }
