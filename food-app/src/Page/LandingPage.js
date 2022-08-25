@@ -10,6 +10,7 @@ import Menu1 from '../assets/menu1.svg'
 import Menu2 from '../assets/menu2.svg'
 import Menu3 from '../assets/menu3.svg'
 import Update from '../Components/Update'
+import Footer from '../Components/Footer'
 
 const LandingPage = () => {
 
@@ -52,6 +53,7 @@ const LandingPage = () => {
         </div>
         <Menu data={data}/>
         <Update />
+        <Footer />
     </div>
   )
 }

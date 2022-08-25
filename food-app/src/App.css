@@ -176,6 +176,8 @@ input .notify {
   line-height: 21px;
   text-align: center;
   color: #00302E;
+  background: #FBDDBB;
+  border-radius: 5px;
 }
 
 input .mail {
@@ -204,4 +206,55 @@ input .mail {
   font-size: 18px;
   line-height: 33px;
   color: rgba(255, 255, 255, 0.95);
+}
+
+.footer {
+  padding: 2rem;
+  margin-top: 5rem;
+  background: #0B0D17;
+}
+
+.footer--text {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5rem;
+}
+
+.footer--text h1 {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 58px;
+  font-feature-settings: 'salt' on, 'liga' off;
+  color: #F4F5F7;
+}
+
+.footer--text p {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  font-feature-settings: 'salt' on, 'liga' off;
+  color: #EEEFF4;
+}
+
+.footer--end {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer--end p {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  font-feature-settings: 'salt' on, 'liga' off;
+  color: #D9DBE1;
+}
+
+.footer--socials {
+ margin: 1rem;
 }
