@@ -26,13 +26,13 @@ const Form = () => {
                     />
                 </label><br/>
                 <label>
-                    <input type='text' name='password' value={inputs.password || ""} placeholder='enter your password'
+                    <input type='password' name='password' value={inputs.password || ""} placeholder='enter your password'
                     onChange={handleChange} 
                     />
                 </label> <br/>
                 <button type='submit' className='submit--form'>LOG IN </button>
             </form>
-            
+
         </div>
   )
 }

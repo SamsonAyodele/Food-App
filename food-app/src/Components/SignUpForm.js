@@ -14,7 +14,7 @@ const SignUpForm = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault()
-    alert(inputs)
+    alert(`successfully signed up`)
   }
 
   return (
@@ -27,7 +27,7 @@ const SignUpForm = () => {
             <input type='text' name='email' value={inputs.email || ""} placeholder='Your email address'
             onChange={handleChange}
             /> <br/>
-            <input type='text' name='password' value={inputs.password || ""} placeholder='Your password'
+            <input type='password' name='password' value={inputs.password || ""} placeholder='Your password'
             onChange={handleChange}
             /> <br/>
             <button type='submit' className='submit--form'>SIGN UP</button>

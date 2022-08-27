@@ -316,7 +316,11 @@ input {
 }
 
 input[type=text] {
-  margin-top: 3rem;
+  margin-top: 2rem;
+}
+
+input[type=password] {
+  margin-top: 2rem;
 }
 
 .signup {
