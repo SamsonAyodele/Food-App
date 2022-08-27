@@ -18,19 +18,19 @@ const SignUpForm = () => {
   }
 
   return (
-    <div className='signform'>
+    <div className='sign--form'>
         <h1>Welcome to Lilies!</h1>
         <form onSubmit={handleSubmit}>
             <input type='text' name='name' value={inputs.name || ""} placeholder='Your First Name'
             onChange={handleChange}
-            />
+            /> <br/>
             <input type='text' name='email' value={inputs.email || ""} placeholder='Your email address'
             onChange={handleChange}
-            />
+            /> <br/>
             <input type='text' name='password' value={inputs.password || ""} placeholder='Your password'
             onChange={handleChange}
-            />
-            <button type='submit'>SIGN UP</button>
+            /> <br/>
+            <button type='submit' className='submit--form'>SIGN UP</button>
         </form>
         <Link to={'/login'}><p>Already have an account. LOGIN</p></Link>
     </div>

@@ -8,7 +8,7 @@ const logInPage = () => {
       <div className='login--img'>
         <img src={Image} alt='login'></img>
       </div>
-        <div className='logform'>
+        <div className='log--form'>
           <Form />
         </div>
     </div>

@@ -1,6 +1,7 @@
 import React from 'react'
-import SignUp from '../assets/logImg.svg'
+import SignUp from '../assets/Group 14.svg'
 import SignUpForm from '../Components/SignUpForm'
+
 
 const SignUpPage = () => {
   return (

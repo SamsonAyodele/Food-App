@@ -38,7 +38,7 @@ body {
   margin: 0.3rem;
 }
 
-li {
+.nav li {
   list-style-type: none;
   font-family: 'Poppins';
   font-style: normal;
@@ -120,7 +120,7 @@ span img {
   margin-top: 5rem;
 }
 
-.menudata {
+.menu--data {
   padding: 2rem;
   align-items: center;
 }
@@ -131,7 +131,7 @@ span img {
   justify-content: space-between;
 }
 
-.menudata h1 {
+.menu--data h1 {
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 700;
@@ -141,7 +141,7 @@ span img {
   color: #FBDDBB;
 }
 
-.menudata p {
+.menu--data p {
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 400;
@@ -151,7 +151,7 @@ span img {
   color: rgba(255, 255, 255, 0.83);
 }
 
-.menudata img {
+.menu--data img {
   border-radius: 400px;
 }
 
@@ -270,18 +270,19 @@ input {
   border-radius: 7px;
 }
 
-.logform {
+.log--form,
+.signup--form {
   background-color: #ffffff;
   text-align: center;
+  width: 100vw;
 }
 
-.form {
-  justify-content: center;
-  align-items: center;
-  padding: 10rem 6rem 0 10rem;
+.form,
+.sign--form {
+  padding: 8rem 6rem 0 8rem;
 }
 
-.form h1 {
+.form h1, .sign--form h1 {
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 600;
@@ -291,7 +292,7 @@ input {
   margin-bottom: 3rem;
 }
 
-.form input {
+.form input, .sign--form input {
   width: 488px;
   height: 60px;
   background: rgba(255, 255, 255, 0.83);
@@ -311,8 +312,29 @@ input {
   text-align: center;
   color: #FBDDBB;
   margin-top: 3rem;
+  width: 488px;
 }
 
 input[type=text] {
   margin-top: 3rem;
+}
+
+.signup {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  background: rgba(226, 184, 135, 0.4);
+  border-radius: 7px;
+}
+
+.sign--form p {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 33px;
+  text-align: center;
+  color: rgba(0, 48, 46, 0.91);
+  text-decoration: none;
+  margin-top: 1rem;
 }

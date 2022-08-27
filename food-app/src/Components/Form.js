@@ -13,7 +13,7 @@ const Form = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    alert(inputs)
+    alert(`you have successfully logged in`)
   }
 
   return (
@@ -32,6 +32,7 @@ const Form = () => {
                 </label> <br/>
                 <button type='submit' className='submit--form'>LOG IN </button>
             </form>
+            
         </div>
   )
 }

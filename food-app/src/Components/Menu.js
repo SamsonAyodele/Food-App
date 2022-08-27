@@ -11,12 +11,12 @@ const Menu = ({data}) => {
             <div className='menu--title1'>
                 {
                     
-                    data && data?.map((item, index) => (
+                    data && data.map((item) => (
                         <>
-                        <div className='menudata'>
-                            <img src={item?.menu} alt='menu'></img>
-                            <h1>{item?.title}</h1>
-                            <p>{ item?.description }</p>
+                        <div className='menu--data'>
+                            <img src={item.menu} alt='menu'></img>
+                            <h1>{item.title}</h1>
+                            <p>{ item.description }</p>
                         </div>
                         </>
                     ))
