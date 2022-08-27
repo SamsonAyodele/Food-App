@@ -9,7 +9,7 @@ const Update = () => {
         </div>
         <div className='update--form'>
             <input type='text' className='mail' placeholder='gregphillips@gmail.com'></input>
-            <input type='text' className='notify' placeholder='Get notified'></input>
+            <button type='submit' className='notify'>Get notified</button>
         </div>
     </div>
   )

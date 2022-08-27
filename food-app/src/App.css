@@ -168,7 +168,7 @@ input {
   margin: 0.2rem;
 }
 
-input .notify {
+.notify {
   font-family: 'Rubik';
   font-style: normal;
   font-weight: 500;
@@ -180,7 +180,7 @@ input .notify {
   border-radius: 5px;
 }
 
-input .mail {
+.mail {
   font-family: 'Rubik';
   font-style: normal;
   font-weight: 400;
@@ -271,6 +271,7 @@ input .mail {
 }
 
 .logform {
+  background-color: #ffffff;
   text-align: center;
 }
 
@@ -290,14 +291,28 @@ input .mail {
   margin-bottom: 3rem;
 }
 
-input {
-width: 488px;
-height: 60px;
-background: rgba(255, 255, 255, 0.83);
-border: 1px solid rgba(251, 221, 187, 0.51);
-border-radius: 5px;
+.form input {
+  width: 488px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.83);
+  border: 1px solid rgba(251, 221, 187, 0.51);
+  border-radius: 5px;
 }
 
-.form--footer {
-  display: flex;
+.submit--form {
+  background: #00302E;
+  border-radius: 5px;
+  font-family: 'Rubik';
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  color: #FBDDBB;
+  margin-top: 3rem;
+}
+
+input[type=text] {
+  margin-top: 3rem;
 }

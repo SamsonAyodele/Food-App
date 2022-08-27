@@ -30,7 +30,7 @@ const Form = () => {
                     onChange={handleChange} 
                     />
                 </label> <br/>
-                <input type='submit'/>
+                <button type='submit' className='submit--form'>LOG IN </button>
             </form>
         </div>
   )
