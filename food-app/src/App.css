@@ -342,3 +342,19 @@ input[type=password] {
   text-decoration: none;
   margin-top: 1rem;
 }
+
+.show--fields {
+  position: absolute;
+  width: 37px;
+  height: 33px;
+  left: 1350px;
+  top: 446px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 33px;
+  text-align: center;
+  color: #00302E;
+  cursor: pointer;
+}

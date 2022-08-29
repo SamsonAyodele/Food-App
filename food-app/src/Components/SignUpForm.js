@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { ToastContainer, toast } from 'react-toastify';
 
 const SignUpForm = () => {
 
@@ -14,11 +15,24 @@ const SignUpForm = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault()
-    alert(`successfully signed up`)
+    sessionStorage.setItem('user', JSON.stringify(inputs))
+    toast.success(`successfully signed up`)
+
+    setInterval(() => {
+      window.location ='/login'
+    }, 2000)
+  }
+
+ 
+
+  const [show, setShow] = useState(false)
+  const handleShow = () => {
+    setShow(!show)
   }
 
   return (
     <div className='sign--form'>
+      <ToastContainer />
         <h1>Welcome to Lilies!</h1>
         <form onSubmit={handleSubmit}>
             <input type='text' name='name' value={inputs.name || ""} placeholder='Your First Name'
@@ -27,9 +41,11 @@ const SignUpForm = () => {
             <input type='text' name='email' value={inputs.email || ""} placeholder='Your email address'
             onChange={handleChange}
             /> <br/>
-            <input type='password' name='password' value={inputs.password || ""} placeholder='Your password'
+            <input type={ show ? 'text' : 'password'} name='password' value={inputs.password || ""} placeholder='Your password'
             onChange={handleChange}
-            /> <br/>
+            /> 
+            <span className='show--fields' onClick= {handleShow}>{ show ? "Hide" : "show" }</span>
+            <br/>
             <button type='submit' className='submit--form'>SIGN UP</button>
         </form>
         <Link to={'/login'}><p>Already have an account. LOGIN</p></Link>

@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import { ToastContainer, toast } from 'react-toastify';
 
 const Form = () => {
 
@@ -13,11 +14,17 @@ const Form = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    alert(`you have successfully logged in`)
+    let user = JSON.parse(sessionStorage.getItem('user'))
+    if(inputs?.email === user?.email && inputs?.password === user?.password) {
+      toast.success(`you have successfully logged in`)
+    }else {
+      toast.error('wrong email or password')
+    }
   }
 
   return (
         <div className='form'>
+          <ToastContainer />
             <h1>WELCOME BACK!</h1>
             <form onSubmit={handleSubmit}>
                 <label>
