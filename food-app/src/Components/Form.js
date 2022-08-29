@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import { ToastContainer, toast } from 'react-toastify';
+import { Link } from 'react-router-dom';
 
 const Form = () => {
 
@@ -22,24 +23,32 @@ const Form = () => {
     }
   }
 
+  const [show, setShow] = useState(false)
+  const handleClick = () => {
+    setShow(!show)
+  }
+
   return (
         <div className='form'>
           <ToastContainer />
             <h1>WELCOME BACK!</h1>
             <form onSubmit={handleSubmit}>
-                <label>
                     <input type='text' name='email' value={inputs.email || ""} placeholder='enter your email'
                     onChange={handleChange} 
                     />
-                </label><br/>
-                <label>
-                    <input type='password' name='password' value={inputs.password || ""} placeholder='enter your password'
+                <br/>
+                    <input type={ show ? 'text' : 'password'} name='password' value={inputs.password || ""} placeholder='enter your password'
                     onChange={handleChange} 
                     />
-                </label> <br/>
+                    <span onClick={handleClick} className='show--field'>{ show ? 'Hide' : 'Show'}</span>
+                 <br/>
                 <button type='submit' className='submit--form'>LOG IN </button>
             </form>
+            <div className='form--footer'>
+              <Link to={'/signup'}><p>Create an account</p></Link>
 
+              <Link to={'/Home'}><p>forgot password</p></Link>
+            </div>
         </div>
   )
 }

@@ -315,6 +315,19 @@ input {
   width: 488px;
 }
 
+.form--footer {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2.5rem;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 33px;
+  text-align: center;
+  color: rgba(0, 48, 46, 0.91);
+}
+
 input[type=text] {
   margin-top: 2rem;
 }
@@ -349,6 +362,22 @@ input[type=password] {
   height: 33px;
   left: 1350px;
   top: 446px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 33px;
+  text-align: center;
+  color: #00302E;
+  cursor: pointer;
+}
+
+.show--field {
+  position: absolute;
+  width: 37px;
+  height: 33px;
+  left: 1360px;
+  top: 350px;
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 400;

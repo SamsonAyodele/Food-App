@@ -18,15 +18,15 @@ const SignUpForm = () => {
     sessionStorage.setItem('user', JSON.stringify(inputs))
     toast.success(`successfully signed up`)
 
-    setInterval(() => {
-      window.location ='/login'
-    }, 2000)
+    // setInterval(() => {
+    //   window.location ='/login'
+    // }, 2000)
   }
 
  
 
   const [show, setShow] = useState(false)
-  const handleShow = () => {
+  const handleClick = () => {
     setShow(!show)
   }
 
@@ -44,7 +44,7 @@ const SignUpForm = () => {
             <input type={ show ? 'text' : 'password'} name='password' value={inputs.password || ""} placeholder='Your password'
             onChange={handleChange}
             /> 
-            <span className='show--fields' onClick= {handleShow}>{ show ? "Hide" : "show" }</span>
+            <span className='show--fields' onClick= {handleClick}>{ show ? "Hide" : "Show" }</span>
             <br/>
             <button type='submit' className='submit--form'>SIGN UP</button>
         </form>
