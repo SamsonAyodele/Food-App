@@ -42,7 +42,7 @@ const LandingPage = () => {
             <div className='heading--text'>
                 <h1>Order food anytime, <br />anywhere</h1>
                 <p>Browse from our list of specials to place your order and have food<br/> delivered to you in no time. Affordable, tasty and fast!</p>
-                <span>
+                <span className='soc-img'>
                     <img src={Soc1} alt='soc'></img>
                     <img src={Soc2} alt='soc'></img>
                 </span>
