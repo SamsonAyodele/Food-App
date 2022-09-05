@@ -18,7 +18,9 @@ const Form = () => {
     let user = JSON.parse(sessionStorage.getItem('user'))
     if(inputs?.email === user?.email && inputs?.password === user?.password) {
       toast.success(`you have successfully logged in`)
-      window.location='/dashboard'
+      setInterval(() =>{
+        window.location='/dashboard'
+      }, 2000) 
     }else {
       toast.error('wrong email or password')
     }
