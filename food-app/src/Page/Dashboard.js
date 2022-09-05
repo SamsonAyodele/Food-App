@@ -1,8 +1,12 @@
 import React from 'react'
 
+let user = JSON.parse(sessionStorage.getItem('user'))
+
 const Dashboard = () => {
   return (
-    <div>Dashboard</div>
+    <div>
+      <h1>{`Good afternoon, ${user?.name}!`}</h1>
+    </div>
   )
 }
 

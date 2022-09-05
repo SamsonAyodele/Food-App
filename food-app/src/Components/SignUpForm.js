@@ -17,10 +17,10 @@ const SignUpForm = () => {
     event.preventDefault()
     sessionStorage.setItem('user', JSON.stringify(inputs))
     toast.success(`successfully signed up`)
-
-    // setInterval(() => {
-    //   window.location ='/login'
-    // }, 2000)
+    
+    setInterval(() => {
+      window.location ='/login'
+    }, 2000)
   }
 
  
