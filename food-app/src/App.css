@@ -466,26 +466,35 @@ input[type=password] {
   .company  {
     margin-left: 1.3rem;
   }
-  .login, .signup {
+  .login, 
+  .signup {
     display: flex;
     overflow: hidden;
     width: 100%;
+    text-align: center;
   }
-  .login img {
-    display: none;
-  }
+  .login img, 
   .signup img {
     display: none;
   }
-  .signup--form, .log--form {
-    width: 100%;
-    overflow: hidden;
-  }
-  .form, .sign--form {
+  .form, 
+  .sign--form {
     overflow: hidden;
     width: 100%;
   }
-
+  .form input,
+  .sign--form input {
+    margin-top: 0;
+    width: 100%;
+    margin: 5px 0;
+  }
+  .form--footer {
+    display: block;
+    text-align: justify;
+  }
+  input[type=text] {
+    width: 100px;
+  }
 
    
 }
@@ -561,39 +570,15 @@ input[type=password] {
   }
   .heading {
     width: 100%;
-    margin-top: 0;
-    grid-template-columns: 1fr 1fr;
+    /* margin-top: 0; */
+    /* grid-template-columns: 1fr 1fr; */
   }
   .heading--image {
     margin-top: 2rem;
     margin-left: 10rem;
   }
   .menu--title1 {
-    display: grid;
-    grid-template-columns: 1fr 1fr ;
+    /* display: grid; */
+    /* grid-template-columns: 1fr 1fr ; */
   }
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-  .landingPage {
-    width: 100%;
-    overflow: hidden;
-  }
-  .heading {
-    margin-top: 2rem;
-    display: flex;
-    justify-content: space-evenly;
-  }
-  br {
-    display: none;
-  }
-  .menu--title1 {
-    display: flex;
-  }
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-
 }
