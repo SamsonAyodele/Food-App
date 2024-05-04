@@ -1,5 +1,4 @@
 import React from "react";
-import Logo from "../assets/lillieslogo.svg";
 import Nav from "../Components/Nav";
 import { Link } from "react-router-dom";
 import Soc1 from "../assets/Group.svg";
@@ -11,6 +10,7 @@ import Menu2 from "../assets/menu2.svg";
 import Menu3 from "../assets/menu3.svg";
 import Update from "../Components/Update";
 import Footer from "../Components/Footer";
+import Logo from "../Components/Logo";
 
 const LandingPage = () => {
   const data = [
@@ -35,21 +35,14 @@ const LandingPage = () => {
     <div className="landingPage">
       <div className="navigation">
         <div className="navigation--left">
-          <div className="header--image">
-            <img src={Logo} alt="logo"></img>
-          </div>
-          <div className="header--text">
-            <Link to={"/"}>
-              <h1>Lillies</h1>
-            </Link>
-          </div>
+          <Logo />
         </div>
         <div className="navigation--right">
           <Link to={"/"}>
             <Nav text={"Home"} />
           </Link>
-          <Link to={"/login"}>
-            <Nav text={"LogIn"} />
+          <Link to="/login">
+            <Nav text="LogIn" />
           </Link>
           <Link to={"/signup"}>
             {" "}
