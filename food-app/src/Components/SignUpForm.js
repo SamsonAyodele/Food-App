@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
-import Logo from "../assets/lillieslogo.svg";
+import Logo from "../Components/Logo";
 
 const SignUpForm = () => {
   const [inputs, setInputs] = useState({});
@@ -34,7 +34,7 @@ const SignUpForm = () => {
       <h1>Welcome to Lilies!</h1>
       {
         <Link to={"/"}>
-          <img src={Logo} alt="logo"></img>
+          <Logo />
         </Link>
       }
       <form onSubmit={handleSubmit}>

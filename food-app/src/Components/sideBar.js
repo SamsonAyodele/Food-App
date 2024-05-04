@@ -2,13 +2,18 @@ import React from "react";
 import { Sidebar, Menu, MenuItem } from "react-pro-sidebar";
 import Logo from "../Components/Logo";
 import { MenuItemData } from "./MenuItemData";
+import { Link } from "react-router-dom";
 
 const sideBar = () => {
   return (
     <div className="side-bar">
       <Sidebar>
         <div className="nav-logo-text">
-          <Logo />
+          {
+            <Link to={"/"}>
+              <Logo />
+            </Link>
+          }
         </div>
         <Menu>
           <MenuItem>
