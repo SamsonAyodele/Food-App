@@ -24,6 +24,10 @@ body {
   display: flex;
 }
 
+.link {
+  text-decoration: none;
+}
+
 .header--text h1 {
   margin-left: 0.5rem;
   margin-top: 1rem;

@@ -36,7 +36,7 @@ const Form = () => {
       <ToastContainer />
       <h1>WELCOME BACK!</h1>
       {
-        <Link to={"/"}>
+        <Link className="link" to={"/"}>
           <Logo />
         </Link>
       }

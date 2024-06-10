@@ -38,13 +38,13 @@ const LandingPage = () => {
           <Logo />
         </div>
         <div className="navigation--right">
-          <Link to={"/"}>
+          <Link className="link"  to={"/"}>
             <Nav text={"Home"} />
           </Link>
-          <Link to="/login">
+          <Link className="link"  to="/login">
             <Nav text="LogIn" />
           </Link>
-          <Link to={"/signup"}>
+          <Link className="link" to={"/signup"}>
             {" "}
             <button>SignUp</button>
           </Link>

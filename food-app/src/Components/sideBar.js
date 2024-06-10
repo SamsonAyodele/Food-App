@@ -10,7 +10,7 @@ const sideBar = () => {
       <Sidebar>
         <div className="nav-logo-text">
           {
-            <Link to={"/"}>
+            <Link className="link" to={"/"}>
               <Logo />
             </Link>
           }

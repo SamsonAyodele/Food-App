@@ -36,30 +36,50 @@ const Dashboard = () => {
   }
 
   // Function to add or update a product in the cart
-  const addToCart = (product) => {
+  const addToCart = () => {
     // Check if the product already exists in the cart
-    const existingProductIndex = cart.findIndex((item) => item.id === product.id);
-
-    if (existingProductIndex !== -1) {
-      // If the product exists, update its quantity
-      const updatedCart = [...cart];
-      updatedCart[existingProductIndex].product_qty += product.product_qty;
-      setCart(updatedCart);
-    } else {
-      // If the product is not in the cart, add it
-      setCart([...cart, product]);
-      console.log("Product added to cart:", product);
-    }
+//     const existingProductIndex = cart.find((item) => item.id === id);
+// let lineItems = []
+//     if (existingProductIndex) {
+//       // If the product exists, update its quantity
+      
+//       // let newQty = cart[existingProductIndex].product_qty += product.product_qty;
+//       console.log('item already in cart')
+//       return cart
+//     } else {
+//       // If the product is not in the cart, add it
+//       lineItems.push(modalData)
+//       setCart((prev) => [...prev,...lineItems]);
+//       console.log(cart,'cart')
+      
+//     }
+setCart((prevCart) => {
+  
+  // Check if the item is already in the cart
+  console.log('Before:', cart);
+  const existingItem = prevCart.find(cartItem => cartItem.id === modalData.id);
+  if (existingItem) {
+    // Update quantity if item exists
+    return prevCart.map(cartItem => 
+      cartItem.id === modalData.id ? { ...cartItem, quantity: cartItem.quantity + modal.quantity } : cartItem
+    );
+  } else {
+    // Add new item to the cart
+    return [...prevCart, modalData];
+  }
+});
+console.log('After:', cart);
   };
 
   // Function to handle decrementing product quantity
   const handleDecrement = (id) => {
     // Update cart state
-    const updatedCart = cart.map((item) =>
-      item.id === id ? { ...item, product_qty: Math.max(0, item.product_qty - 1) } : item
-    );
-    console.log("Updated Cart (Decrement):", updatedCart);
-    setCart(updatedCart);
+    setModalData((prev)=> ({...prev, product_qty: Math.max(1, prev.product_qty - 1)}))
+    // const updatedCart = cart.map((item) =>
+    //   item.id === id ? { ...item, product_qty: Math.max(0, item.product_qty - 1) } : item
+    // );
+    // console.log("Updated Cart (Decrement):", updatedCart);
+    // setCart(updatedCart);
   };
 
   // Function to handle incrementing product quantity
@@ -116,7 +136,7 @@ const Dashboard = () => {
           title={modalData.title}
           description={modalData.description}
           price={padTo(modalData.price, "$")}
-          addToCart={(qty) => addToCart({ ...modalData, product_qty: qty })}
+          addToCart={addToCart}
           handleDecrement={() => handleDecrement(modalData.id)}
           handleIncrement={() => handleIncrement(modalData.id)}
           product_qty={modalData.product_qty}

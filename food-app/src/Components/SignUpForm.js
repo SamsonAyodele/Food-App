@@ -33,7 +33,7 @@ const SignUpForm = () => {
       <ToastContainer />
       <h1>Welcome to Lilies!</h1>
       {
-        <Link to={"/"}>
+        <Link className="link" to={"/"}>
           <Logo />
         </Link>
       }
