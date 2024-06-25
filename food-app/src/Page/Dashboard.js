@@ -30,6 +30,10 @@ const Dashboard = () => {
 
   function showModal(id) {
     let myData = DashboardData.find((data) => data.id === id);
+    const cartItem = cart.find((item) => item.id === id)
+    if(cartItem){
+      myData = { ...myData, product_qty: cartItem.product_qty };
+    }
     // console.log(myData);
     setModalData(myData);
     setModal((prev) => !prev);
@@ -37,57 +41,63 @@ const Dashboard = () => {
 
   // Function to add or update a product in the cart
   const addToCart = () => {
-    // Check if the product already exists in the cart
-//     const existingProductIndex = cart.find((item) => item.id === id);
-// let lineItems = []
-//     if (existingProductIndex) {
-//       // If the product exists, update its quantity
-      
-//       // let newQty = cart[existingProductIndex].product_qty += product.product_qty;
-//       console.log('item already in cart')
-//       return cart
-//     } else {
-//       // If the product is not in the cart, add it
-//       lineItems.push(modalData)
-//       setCart((prev) => [...prev,...lineItems]);
-//       console.log(cart,'cart')
-      
-//     }
-setCart((prevCart) => {
-  
-  // Check if the item is already in the cart
-  console.log('Before:', cart);
-  const existingItem = prevCart.find(cartItem => cartItem.id === modalData.id);
-  if (existingItem) {
-    // Update quantity if item exists
-    return prevCart.map(cartItem => 
-      cartItem.id === modalData.id ? { ...cartItem, quantity: cartItem.quantity + modal.quantity } : cartItem
-    );
-  } else {
-    // Add new item to the cart
-    return [...prevCart, modalData];
-  }
-});
-console.log('After:', cart);
+    setCart((prevCart) => {
+      // Check if the item is already in the cart
+      console.log("Before:", cart);
+      const existingItem = prevCart.find(
+        (cartItem) => cartItem.id === modalData.id
+      );
+      if (existingItem) {
+        // Update quantity if item exists
+        return prevCart.map((cartItem) =>
+          cartItem.id === modalData.id
+            ? { ...cartItem, product_qty: cartItem.product_qty + modalData.product_qty }
+            : cartItem
+        );
+      } else {
+        // Add new item to the cart
+        const newItem = { ...modalData, product_qty: modalData.product_qty || 1 };
+        return [...prevCart, newItem];
+      }
+    });
+    console.log("After:", cart);
   };
 
   // Function to handle decrementing product quantity
   const handleDecrement = (id) => {
     // Update cart state
-    setModalData((prev)=> ({...prev, product_qty: Math.max(1, prev.product_qty - 1)}))
-    // const updatedCart = cart.map((item) =>
-    //   item.id === id ? { ...item, product_qty: Math.max(0, item.product_qty - 1) } : item
-    // );
-    // console.log("Updated Cart (Decrement):", updatedCart);
-    // setCart(updatedCart);
+    setCart((prevCart) =>
+      prevCart.map((item) =>
+        item.id === id
+          ? { ...item, product_qty: Math.max(1, item.product_qty - 1 ) }
+          : item
+      )
+    );
+     // Update modal data if modal is open and matches the id
+     if (modalData && modalData.id === id) {
+      setModalData((prev) => ({
+        ...prev,
+        product_qty: Math.max(1, prev.product_qty - 1),
+      }));
+    }
   };
 
   // Function to handle incrementing product quantity
   const handleIncrement = (id) => {
     // Update cart state
-    const updatedCart = cart.map((item) => (item.id === id ? { ...item, product_qty: item.product_qty + 1 } : item));
-    console.log("Updated Cart (Increment):", updatedCart);
-    setCart(updatedCart);
+    setCart((prevCart) =>
+      prevCart.map((item) =>
+        item.id === id ? { ...item, product_qty: item.product_qty + 1 } : item
+      )
+    );
+      // Update modal data if modal is open and matches the id
+      if (modalData && modalData.id === id) {
+        setModalData((prev) => ({
+          ...prev,
+          product_qty: Math.max(1, prev.product_qty + 1),
+        }));
+      }
+    // setModalData((prev) => ({ ...prev, product_qty: prev.product_qty + 1 }));
   };
 
   return (
@@ -109,7 +119,11 @@ console.log('After:', cart);
           <ul>
             {DashboardData.map((val, index) => {
               return (
-                <li className="menu-list" key={index} onClick={() => showModal(val.id)}>
+                <li
+                  className="menu-list"
+                  key={index}
+                  onClick={() => showModal(val.id)}
+                >
                   <div className="main-container">
                     <div className="menu-cont">
                       <div>
